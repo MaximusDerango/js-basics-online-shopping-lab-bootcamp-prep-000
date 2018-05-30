@@ -28,7 +28,7 @@ function viewCart() {
     var name = cart[i]['itemName'];
     var price = cart[i]['itemPrice'];
     var comma = i === 0 ? '' : ',';
-    var and = i === cart.length - 1 && cart.lenth != 1 ? ' and' : ''
+    var and = i === cart.length - 1 && cart.length != 1 ? ' and' : ''
     cart_message = `${cart_message}${comma}${and} ${name} at \$${price}`;
   }
   return `${cart_message}.`;
