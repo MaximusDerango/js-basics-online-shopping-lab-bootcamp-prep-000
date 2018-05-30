@@ -27,7 +27,7 @@ function viewCart() {
   for (let i = 0; i < cart.length; i++) {
     var name = cart[i]['itemName'];
     var price = cart[i]['itemPrice'];
-    cart_message = `${cart_message}${i === 0 ? ',' : ''} ${name} at \$${price}`;
+    cart_message = `${cart_message}${i === 0 ? '' : ','} ${name} at \$${price}`;
   }
   return `${cart_message}.`;
   
