@@ -12,7 +12,7 @@ function setCart(c) {
 function addToCart(item) {
  // write your code here
  var random_price = Math.floor(Math.random()*100);
- var new_item = {itemName: item, itemPrice: random_price};
+ var new_item = {'itemName': item, 'itemPrice': random_price};
  cart.push(new_item);
  return `${item} has been added to your cart.`;
 }
@@ -25,10 +25,10 @@ function viewCart() {
   
   var cart_message = "In your cart, you have";
   for (let i = 0; i < cart.length; i++) {
-    var name = cart[i]['itemName'];
-    var price = cart[i]['itemPrice'];
+    var name = cart[i].itemName;
+    var price = cart[i].itemPrice;
     var comma = i === 0 ? '' : ',';
-    var and = (i === cart.length - 1 && cart.length != 1) ? ' and' : ''
+    var and = (i === cart.length - 1 && cart.length != 1) ? ' and' : '';
     cart_message = `${cart_message}${comma}${and} ${name} at \$${price}`;
   }
   return `${cart_message}.`;
