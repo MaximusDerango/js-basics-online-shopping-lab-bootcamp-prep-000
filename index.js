@@ -25,8 +25,8 @@ function viewCart() {
   
   var cart_message = "In your cart, you have";
   for (let i = 0; i < cart.length; i++) {
-    var name = cart[i][itemName];
-    var price = cart[i][itemPrice];
+    var name = cart[i]['itemName'];
+    var price = cart[i]['itemPrice'];
     cart_message = `${cart_message}${i === 0 ? ',' : ''} ${name} at \$${price}`;
   }
   return `${cart_message}.`;
